@@ -2,11 +2,12 @@
   "name": "todos-api",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "commonjs",
   "author": "n-kev1n <kevin_@tuta.io>",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server"
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js"
   },
   "dependencies": {
     "colors": "^1.4.0",
