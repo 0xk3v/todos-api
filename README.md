@@ -9,4 +9,8 @@ Available Methods:
 * [ ] PUT
 * [ ] DELETE
 
+*Key:*
+* [X] Finished
+* [ ] Unfinished
+
 #### Made with 💚 by [n-kev1n](https://github.com/n-kev1n)
