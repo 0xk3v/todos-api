@@ -1,5 +1,12 @@
-# Todos Rest API with Node JS && Express
+# Todos Rest API with Node JS & Express
 
-A very basic Node JS project for Todos api
+A very basic Node JS project for Todos API
 
-made with 💚
+Available Methods:
+
+* [X] GET 
+* [ ] POST
+* [ ] PUT
+* [ ] DELETE
+
+#### Made with 💚 by [n-kev1n](https://github.com/n-kev1n)
