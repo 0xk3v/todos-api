@@ -6,8 +6,6 @@ const port = 5000 || process.env.PORT;
 
 const app = express();
 
-app.get("/api/todos", (req, res) => {
-  res.send({ message: "hola" });
-});
+app.use("/api/todos", require("./routes/todoRoutes"));
 
 app.listen(port, () => console.log(`Server started on port: ${port}`));
