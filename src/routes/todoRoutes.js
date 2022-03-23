@@ -1,3 +1,5 @@
+// File that holds The Todo Routes...
+
 const express = require("express");
 const router = express.Router();
 const {
@@ -7,9 +9,7 @@ const {
   deleteTodos,
 } = require("../controllers/todoControllers");
 
-router.get("/", getTodos);
-router.post("/", setTodos);
-router.put("/:id", updateTodos);
-router.delete("/:id", deleteTodos);
+router.route("/").get(getTodos).post(setTodos);
+router.route("/:id").put(updateTodos).delete(deleteTodos);
 
 module.exports = router;
