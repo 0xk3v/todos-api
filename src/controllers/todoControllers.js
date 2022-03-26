@@ -1,13 +1,13 @@
 const asyncHandler = require("express-async-handler");
 
-const Goals = require("../models/goalModel");
+const Todos = require("../models/goalModel");
 
 // @desc GET todos
 // @route /api/todos
 // @access Private
 
 const getTodos = asyncHandler(async (req, res) => {
-  const goals = await Goals.find();
+  const goals = await Todos.find();
   res.status(200).json(goals);
 });
 
@@ -20,10 +20,10 @@ const setTodos = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("Please add a text field");
   }
-  const goal = await Goals.create({
+  const todo = await Todos.create({
     text: req.body.text,
   });
-  res.status(200).json(goal);
+  res.status(200).json(todo);
 });
 
 // @desc PUT todos
@@ -31,18 +31,18 @@ const setTodos = asyncHandler(async (req, res) => {
 // @access Private
 
 const updateTodos = asyncHandler(async (req, res) => {
-  const goal = await Goals.findById(req.params.id);
+  const todo = await Todos.findById(req.params.id);
 
-  if (!goal) {
+  if (!todo) {
     res.status(400);
     throw new Error("Todo Not Found");
   }
 
-  const updatedGoal = await Goals.findByIdAndUpdate(req.params.id, req.body, {
+  const updatedTodo = await Todos.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
 
-  res.status(200).json(updatedGoal);
+  res.status(200).json(updatedTodo);
 });
 
 // @desc DELETE todos
@@ -50,14 +50,14 @@ const updateTodos = asyncHandler(async (req, res) => {
 // @access Private
 
 const deleteTodos = asyncHandler(async (req, res) => {
-  const goal = await Goals.findById(req.params.id);
+  const todo = await Todos.findById(req.params.id);
 
-  if (!goal) {
+  if (!todo) {
     res.status(400);
     throw new Error("Todo Not Found");
   }
 
-  await goal.remove();
+  await todo.remove();
 
   res.status(200).json(req.params.id);
 });
