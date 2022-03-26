@@ -5,9 +5,9 @@ A very basic Node JS project for Todos API
 Available Methods:
 
 * [X] GET 
-* [ ] POST
-* [ ] PUT
-* [ ] DELETE
+* [X] POST
+* [X] PUT
+* [X] DELETE
 
 *Key:*
 * [X] Finished
