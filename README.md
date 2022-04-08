@@ -17,6 +17,6 @@ Available Methods:
 
 ### Tech Stack:
 * __Database__: MongoDB
-* __Model&Controller__: Express & NodeJS
+* __Models & Controllers__: Express & NodeJS
 
 #### Made with 💚 by [n-kev1n](https://github.com/n-kev1n)
